@@ -1,0 +1,88 @@
+body {
+    font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+    /* padding-top: 10%;
+    padding: 10%; */
+}
+
+nav {
+    border-bottom:1px solid #000;
+}
+
+.top-buffer { 
+    margin-top: 7%; 
+}
+
+#main-content {
+    /* display: block; */
+    padding-top: 18%;
+    /* margin-left: 7%; */
+    /* margin-right: 7%; */
+    padding-left: 10%;
+    padding-right: 10%;
+    padding: 10%;
+}
+
+#intro {
+    padding-bottom: 7%;
+}
+
+#profile-picture {
+    object-fit: cover;
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+}
+
+ /* .projects{
+     padding-top: 50px;
+ } */
+ 
+
+ #projects .row .col{
+     margin-bottom: 7%;
+ }
+ 
+ .card {
+     width: 18rem;
+ }
+
+ .card img {
+     height: 18em;
+     object-fit: cover;
+ }
+
+ a {
+    color: rgba(29, 106, 154, 0.72);
+    font-weight: bold;
+    /* border-style: solid;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-color: rgba(29, 106, 154, 0.72); */
+ }
+  
+.img-description {
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+  
+.card:hover .img-description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card:active .img-description {
+    visibility: visible;
+    opacity: 1;
+}
