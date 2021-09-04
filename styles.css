@@ -1,77 +1,92 @@
 body {
-    font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Biryani', sans-serif;
     /* padding-top: 10%;
     padding: 10%; */
+    padding: 80px;
 }
 
-nav {
-    border-bottom:1px solid #000;
+span {
+    color: #282828;
 }
 
-.top-buffer { 
-    margin-top: 7%; 
+nav span {
+    padding-right: 44px;
 }
 
-#main-content {
-    /* display: block; */
-    padding-top: 18%;
-    /* margin-left: 7%; */
-    /* margin-right: 7%; */
-    padding-left: 10%;
-    padding-right: 10%;
-    padding: 10%;
+.logo {
+    /* position: absolute;
+    width: 116px;
+    height: 114px;
+    left: 332px;
+    top: 278px; */
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+}
+
+.bluesquare {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #93B5C6;
+}
+
+.pinksquare {
+    position: absolute;
+    left: 16px;
+    top: 14px;
+
+    background: #E4D8DC;
 }
 
 #intro {
-    padding-bottom: 7%;
+    display: inline-block;
+    /* position: absolute; */
+    /* width: 470px;
+    height: 93px;
+    left: 512px;
+    top: 299px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 17em;
+    font-size: 24px;
 }
 
-#profile-picture {
-    object-fit: cover;
-    height: 15em;
-    width: 15em;
-    border-radius: 50%;
-}
- 
 
- #projects .row .col{
-     margin-bottom: 7%;
- }
- 
- .card {
-     width: 18rem;
- }
+@media screen and (max-width: 600px) {
+    body {
+        padding: 33px;
+    }
 
- .card img {
-     height: 18em;
-     object-fit: cover;
- }
+    nav span {
+        padding-right: 22px;
+        font-size: 12px;
+    }
 
- a {
-    color: rgba(29, 106, 154, 0.72);
-    font-weight: bold;
-    /* border-style: solid;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    border-color: rgba(29, 106, 154, 0.72); */
- }
+    .logo {
+        position: absolute;
+        width: 49px;
+        height: 48.16px;
+        /* left: 343px; */
+        top: 25px;
+    }
+
+    .pinksquare {
+        left: 6.76px;
+        top: 5.91px;
+    }
+    
+    .square{
+        width: 42.5px;
+        height: 42.5px;
+    }
+
+    #intro {
+        font-size: 18px;
+        
+    }
+  }
   
-.img-description {
-    background: rgba(29, 106, 154, 0.72);
-    color: #fff;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .2s, visibility .2s;
-}
-  
-.card:hover .img-description {
-    visibility: visible;
-    opacity: 1;
-}
-
-.card:active .img-description {
-    visibility: visible;
-    opacity: 1;
-}
