@@ -1,8 +1,9 @@
 body {
     font-family: 'Biryani', sans-serif;
-    /* padding-top: 10%;
-    padding: 10%; */
     padding: 80px;
+    margin: 0;
+    width: auto;
+    box-sizing: border-box;
 }
 
 span {
@@ -13,12 +14,60 @@ nav span {
     padding-right: 44px;
 }
 
+#profile-picture {
+    width: 400px;
+    position: absolute;
+    /* width: 25vw; */
+    border-radius: 10px;
+    right: 378px;
+    top: 210px;
+    z-index: 3;
+}
+
+#intro {
+    display: inline;
+}
+
+#intro-text {
+    margin-top: 200px;
+    font-size: 24px;
+}
+
 .logo {
-    /* position: absolute;
-    width: 116px;
-    height: 114px;
-    left: 332px;
-    top: 278px; */
+    position: absolute;
+    /* left: calc(100% - 180px); */
+    right: 180px;
+}
+
+.logo #logo-icon {
+    position: absolute;
+    z-index: 3;
+    width: 85px;
+    padding: 12.5px;
+}
+
+.logo:hover .pinksquare{
+    animation-name: moveSquare;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.logo .pinksquare{
+    animation-name: moveSquareBack;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.logo:hover .bluesquare{
+    animation-name: changeSquareColor;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.logo .bluesquare{
+    animation-name: changeSquareColorBack;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .square{
@@ -27,6 +76,7 @@ nav span {
 }
 
 .bluesquare {
+    z-index: 2;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -34,29 +84,31 @@ nav span {
 }
 
 .pinksquare {
+    z-index: 1;
     position: absolute;
     left: 16px;
     top: 14px;
-
     background: #E4D8DC;
-}
+} 
 
-#intro {
-    display: inline-block;
-    /* position: absolute; */
-    /* width: 470px;
-    height: 93px;
-    left: 512px;
-    top: 299px; */
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
-    width: 17em;
-    font-size: 24px;
+#rectangle {
+    position: absolute;
+    width: calc(100vw - 80px);
+    height: 605px;
+    top: 410px;
+    background: #F3F0F1;
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1400px) {
+    #profile-picture{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 780px) {
     body {
         padding: 33px;
     }
@@ -66,13 +118,36 @@ nav span {
         font-size: 12px;
     }
 
+    #profile-picture {
+        display: none;
+    }
+
+    #intro-text {
+        margin-top: 100px;
+        font-size: 18px;
+    }
+
     .logo {
         position: absolute;
-        width: 49px;
-        height: 48.16px;
-        /* left: 343px; */
-        top: 25px;
+        left: calc(100% - 80px);
+        /* height: 48.16px;
+        top: 25px; */
     }
+
+    .logo #logo-icon {
+        position: relative;
+        z-index: 3;
+        width: 34px;
+        padding: 5.3125px;
+    }
+
+    #rectangle {
+        width: calc(100vw - 33px);
+        height: 100px;
+        top: 225px;
+        background: #F3F0F1;
+    }
+    
 
     .pinksquare {
         left: 6.76px;
@@ -83,10 +158,48 @@ nav span {
         width: 42.5px;
         height: 42.5px;
     }
+  }
 
-    #intro {
-        font-size: 18px;
-        
+
+  @keyframes moveSquare {
+    from {
+        left: 16px;
+        top: 14px;
+    }
+    to {
+        left: 0px;
+        top: 0px;
     }
   }
+
+  @keyframes moveSquareBack {
+    from {
+        left: 0px;
+        top: 0px;
+    }
+    to {
+        left: 16px;
+        top: 14px;
+    }
+  }
+
+  @keyframes changeSquareColor {
+    from {
+        background: #93B5C6;
+    }
+    to {
+        background: #E4D8DC;
+    }
+  }
+
+  @keyframes changeSquareColorBack {
+    from {
+        background: #E4D8DC;
+    }
+    to {
+        background: #93B5C6;     
+    }
+  }
+
+
   
