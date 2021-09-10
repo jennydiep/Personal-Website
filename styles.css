@@ -4,6 +4,7 @@ body {
     margin: 0;
     width: auto;
     box-sizing: border-box;
+    /* max-width: 1440px; */
 }
 
 span {
@@ -30,7 +31,16 @@ nav span {
 
 #intro-text {
     margin-top: 200px;
-    font-size: 24px;
+    font-size: 36px;
+}
+
+#intro-text p{
+    font-size: 30px;
+    font-weight: 200;
+}
+
+#intro-text b{
+    font-weight:600;
 }
 
 .logo {
@@ -91,13 +101,104 @@ nav span {
     background: #E4D8DC;
 } 
 
+.container img {
+    width: 527px;
+    height: 358px;
+    overflow: hidden;
+    z-index: 3;
+    position: relative;
+}
+
+.col img:hover{
+    animation-name: moveRectangleForImage;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
 #rectangle {
     position: absolute;
     width: calc(100vw - 80px);
-    height: 605px;
+    /* height: 700px; */
+    height: 800px;
     top: 410px;
     background: #F3F0F1;
 }
+
+#projects {
+    padding-top: 900px;
+}
+
+.project {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.project-rectangle {
+    width: 527px;
+    height: 358px;
+    z-index: 1;
+    position: absolute;
+    /* top: 20px;
+    left: 40px; */
+    background: #C9CCD5;
+}
+
+.project-content {
+    padding-left: 50px;
+    padding-top: 138.5px;
+}
+
+.project-content span {
+    color:#ABABAB;
+    font-weight: 200;
+}
+
+.project-content button {
+    /* position: absolute;
+    width: 128px;
+    height: 39px;
+    left: 791px;
+    top: 1427px; */
+    margin-top: 80px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    background: #FFFFFF;
+    border: 3px solid #C9CCD5;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 23px;
+    color: #C9CCD5;
+}
+
+
+@keyframes moveSquare {
+    from {
+        left: 16px;
+        top: 14px;
+    }
+    to {
+        left: 0px;
+        top: 0px;
+    }
+  }
+
+  @keyframes moveSquareBack {
+    from {
+        left: 0px;
+        top: 0px;
+    }
+    to {
+        left: 16px;
+        top: 14px;
+    }
+  }
 
 
 @media screen and (max-width: 1400px) {
@@ -158,29 +259,28 @@ nav span {
         width: 42.5px;
         height: 42.5px;
     }
-  }
 
-
-  @keyframes moveSquare {
-    from {
-        left: 16px;
-        top: 14px;
-    }
-    to {
-        left: 0px;
-        top: 0px;
-    }
-  }
-
-  @keyframes moveSquareBack {
-    from {
-        left: 0px;
-        top: 0px;
-    }
-    to {
-        left: 16px;
-        top: 14px;
-    }
+    @keyframes moveSquare {
+        from {
+            left: 6.76px;
+            top: 5.91px;
+        }
+        to {
+            left: 0px;
+            top: 0px;
+        }
+      }
+    
+      @keyframes moveSquareBack {
+        from {
+            left: 0px;
+            top: 0px;
+        }
+        to {
+            left: 6.76px;
+            top: 5.91px;
+        }
+      }
   }
 
   @keyframes changeSquareColor {
@@ -199,6 +299,20 @@ nav span {
     to {
         background: #93B5C6;     
     }
+  }
+
+  @keyframes moveRectangleForImage {
+      from {
+        bottom: 0px;
+        right: 0px;
+        opacity:1;
+  
+      }
+      to {
+        bottom: 20px;
+        right: 30px;
+        opacity:0.90;
+      }
   }
 
 
