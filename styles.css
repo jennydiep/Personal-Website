@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Biryani', sans-serif;
     padding: 80px;
@@ -13,6 +17,15 @@ span {
 
 nav span {
     padding-right: 44px;
+}
+
+nav span a {
+    color: #282828;
+}
+
+nav span a:hover {
+    color:#C9CCD5;
+    text-decoration: none;
 }
 
 #profile-picture {
@@ -101,23 +114,28 @@ nav span {
     background: #E4D8DC;
 } 
 
-.container img {
+.project img {
     width: 527px;
     height: 358px;
-    overflow: hidden;
+    object-fit: cover;
     z-index: 3;
     position: relative;
+
+    animation-name: moveRectangleForImageBack;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
-.col img:hover{
+.project img:hover{
     animation-name: moveRectangleForImage;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
+
 #rectangle {
     position: absolute;
-    width: calc(100vw - 80px);
+    width: calc(100vw - 97px);
     /* height: 700px; */
     height: 800px;
     top: 410px;
@@ -144,7 +162,7 @@ nav span {
 }
 
 .project-content {
-    padding-left: 50px;
+    padding-left: 25px;
     padding-top: 138.5px;
 }
 
@@ -153,12 +171,13 @@ nav span {
     font-weight: 200;
 }
 
-.project-content button {
+.project-content .github-button {
     /* position: absolute;
     width: 128px;
     height: 39px;
     left: 791px;
     top: 1427px; */
+    display: inline-flex;
     margin-top: 80px;
 
     padding-top: 5px;
@@ -175,6 +194,17 @@ nav span {
     font-size: 13px;
     line-height: 23px;
     color: #C9CCD5;
+}
+
+.github-button:hover {
+    background: #C9CCD5;
+    color:#FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.github-button:active {
+    background: #999ba1;
 }
 
 
@@ -226,6 +256,11 @@ nav span {
     #intro-text {
         margin-top: 100px;
         font-size: 18px;
+    }
+
+    #intro-text p{
+        font-size: 12px;
+        font-weight: 200;
     }
 
     .logo {
@@ -314,6 +349,20 @@ nav span {
         opacity:0.90;
       }
   }
+
+  @keyframes moveRectangleForImageBack {
+    from {
+        bottom: 20px;
+        right: 30px;
+        opacity:0.90;
+    }
+    to {
+        bottom: 0px;
+        right: 0px;
+        opacity:1;
+
+    }
+}
 
 
   
